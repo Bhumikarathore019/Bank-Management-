@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - MyBank</title>
+    <link rel="stylesheet" href="abc.css"> <!-- Link to your CSS file -->
+    <style>
+        .about-section {
+            padding: 100px 20px 60px;
+            background-color: var(--tan);
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 2.8rem;
+            color: var(--yellow);
+            margin-bottom: 20px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .team-section {
+            padding: 60px 20px;
+            background-color: var(--cyan);
+            text-align: center;
+            color: black;
+        }
+
+        .team-section h3 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .team-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .team-card {
+            background-color: var(--orange);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            width: 260px;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .team-card p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>MyBank</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <h2>About MyBank</h2>
+        <p>
+            MyBank is committed to making banking simple, secure, and accessible for everyone. 
+            With cutting-edge digital services, personalized financial solutions, and customer-first approach, 
+            we aim to redefine your banking experience. Whether you're saving for the future, 
+            investing smartly, or managing your daily transactions, MyBank is here to support you every step of the way.
+        </p>
+    </section>
+
+    <section class="team-section">
+        
+        <div class="team-cards">
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1743090597684-8929e6b86b74?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D" alt="bhuma" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 15px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                <h4>Bhumika</h4>
+                <p>Full-Stack Developer</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2025 MyBank. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

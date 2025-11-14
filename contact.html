@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - MyBank</title>
+    <link rel="stylesheet" href="abc.css">
+    <style>
+        :root {
+            --yellow: #191d23;
+            --cyan: #57707a;
+            --magenta: #7e919f;
+            --orange: #979dab;
+            --green: #c5bac4;
+            --tan: #dedcdc;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: var(--tan);
+            margin: 0;
+            padding: 0;
+            color: var(--cyan);
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header {
+            background-color: var(--yellow);
+            color: #54acbf;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        main {
+            margin-top: 100px;
+            padding: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--yellow);
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: var(--green);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid var(--orange);
+            border-radius: 8px;
+            font-size: 1em;
+            background-color: var(--tan);
+            color: var(--yellow);
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--magenta);
+        }
+
+        button {
+            background-color: var(--magenta);
+            color: white;
+            padding: 12px 25px;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: var(--orange);
+        }
+
+        footer {
+            background-color: var(--yellow);
+            color: #54acbf;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<header>
+    <div class="header-container">
+        <h1>MyBank</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <h2>We'd Love to Hear From You</h2>
+    <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2025 MyBank | Developed by Bhumika</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyBank - Loan</title>
+  <style>
+    /* Bright Color Palette */
+    :root {
+    --yellow: #191d23;    /* Bright Yellow */
+    --cyan: #57707a;      /* Cyan */
+    --pink: #6b9071;    /* Bright Pink */
+    --black: #000000;   /* Black Text */
+    --white: #FFFFFF;   /* White Background */
+    --gray: #EEEEEE;    /* Light Gray */
+
+    --magenta: #7e919f;   /* Magenta */
+    --orange: #979dab;    /* Bright Orange */
+    --green: #c5bac4;     /* Neon Green */
+    --tan: #dedcdc;       /* Soft Yellow */
+
+}
+
+    /* General Styles */
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: var(--gray);
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.5s ease-in-out;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--yellow);
+      color: #54acbf;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header-container h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    /* Navigation */
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    .menu ul li a {
+      color: #54acbf;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .menu ul li a:hover {
+      color: var(--pink);
+      transform: scale(1.1);
+    }
+
+    /* Main Layout */
+    main {
+      padding: 160px 20px 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      background-color: var(--white);
+      padding: 25px;
+      margin: 30px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s ease;
+    }
+
+    h2 {
+      color: var(--black);
+      margin-top: 0;
+      text-align: center;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Forms */
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border-radius: 8px;
+      border: 1px solid var(--black);
+      font-size: 1em;
+    }
+
+    button {
+      background-color: var(--pink);
+      color: var(--black);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--cyan);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #54acbf;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>MyBank</h1>
+    <nav class="menu">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="acc.html">Accounts</a></li>
+        <!-- <li><a href="loan.html">Loans</a></li> -->
+        <li><a href="inv.html">Investments</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="loan-overview">
+    <h2>Loan Overview</h2>
+    <p><strong>Current Loan Balance:</strong> $15,000.00</p>
+    <p><strong>Interest Rate:</strong> 5% per annum</p>
+    <p><strong>Monthly Payment:</strong> $400.00</p>
+    <p><strong>Loan Term:</strong> 5 years</p>
+  </section>
+
+  <section class="loan-application">
+    <h2>Apply for a New Loan</h2>
+    <form>
+      <label for="loan-amount">Loan Amount ($):</label>
+      <input type="number" id="loan-amount" name="loan-amount" required>
+
+      <label for="loan-term">Loan Term (years):</label>
+      <input type="number" id="loan-term" name="loan-term" required>
+
+      <label for="income">Annual Income ($):</label>
+      <input type="number" id="income" name="income" required>
+
+      <label for="loan-type">Loan Type:</label>
+      <select id="loan-type" name="loan-type">
+        <option value="personal">Personal Loan</option>
+        <option value="auto">Auto Loan</option>
+        <option value="mortgage">Mortgage</option>
+        <option value="education">Education Loan</option>
+      </select>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+  <section class="loan-repayment">
+    <h2>Make a Repayment</h2>
+    <form>
+      <label for="repayment-amount">Repayment Amount ($):</label>
+      <input type="number" id="repayment-amount" name="repayment-amount" required>
+
+      <label for="repayment-date">Repayment Date:</label>
+      <input type="date" id="repayment-date" name="repayment-date" required>
+
+      <button type="submit">Make Repayment</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 MyBank. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

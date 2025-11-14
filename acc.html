@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBank - Account Section</title>
+    <!-- <link rel="stylesheet" href="abc.css"> -->
+     <style>
+        /* Bright Color Palette */
+:root {
+    --yellow: #191d23;    /* Bright Yellow */
+    --cyan: #57707a;      /* Cyan */
+    --pink: #6b9071;    /* Bright Pink */
+    --black: #000000;   /* Black Text */
+    --white: #FFFFFF;   /* White Background */
+    --gray: #EEEEEE;    /* Light Gray */
+
+    --magenta: #7e919f;   /* Magenta */
+    --orange: #979dab;    /* Bright Orange */
+    --green: #c5bac4;     /* Neon Green */
+    --tan: #dedcdc;       /* Soft Yellow */
+
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: var(--tan);
+    /* color: var(--cyan); */
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Header */
+header {
+    /* height: 10vh; */
+    background-color: var(--yellow);
+    color: #54acbf;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Navigation Menu */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    color: #54acbf;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.menu ul li a:hover {
+    color: var(--magenta);
+    transform: scale(1.1);
+}
+
+
+/* Main Sections */
+main {
+    padding-top: 120px; /* Adjust this based on header height */
+    height: auto; /* optional: better flexibility */
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+section {
+    background-color: var(--gray);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: var(--black);
+}
+
+.account-overview {
+    background-color: white;
+    margin-top: 140px;
+}
+
+#balance-trend {
+    font-weight: bold;
+    color: green;
+}
+
+/* Recent Transactions */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: var(--white);
+}
+
+thead {
+    background-color: var(--pink);
+    color: var(--black);
+}
+
+td, th {
+    padding: 10px;
+    border: 1px solid var(--black);
+    text-align: left;
+}
+
+/* Forms */
+input, button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid var(--black);
+}
+
+button {
+    background-color: var(--pink);
+    color: var(--black);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--cyan);
+}
+
+/* Investment & Loan */
+.investment-loan {
+    background-color: whitesmoke;
+}
+
+.investment-summary, .loan-summary {
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--cyan);
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+
+     </style>
+</head>
+<body>
+
+<header>
+    <h1>MyBank Account Dashboard</h1>
+		<nav class="menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <!-- <li><a href="acc.html">Accounts</a></li> -->
+                    <li><a href="loan.html">Loans</a></li>
+                    <li><a href="inv.html">Investments</a></li>
+					<li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+</header>
+<main>
+    <!-- Account Overview Section -->
+    <section class="account-overview">
+        <h2>Account Overview</h2>
+        <p><strong>Account Number:</strong> 1234567890</p>
+        <p><strong>Account Type:</strong> Savings</p>
+        <p><strong>Current Balance:</strong> $10,000.00</p>
+        <p><strong>Balance Trend:</strong> <span id="balance-trend">↑ 5% YTD</span></p>
+    </section>
+
+    <!-- Recent Transactions Section -->
+    <section class="recent-transactions">
+        <h2>Recent Transactions</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025-02-15</td>
+                    <td>ATM Withdrawal</td>
+                    <td>-$200.00</td>
+                    <td>$9,800.00</td>
+                </tr>
+                <tr>
+                    <td>2025-02-10</td>
+                    <td>Direct Deposit</td>
+                    <td>+$1,000.00</td>
+                    <td>$10,000.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Fund Transfer Section -->
+    <section class="fund-transfer">
+        <h2>Fund Transfers</h2>
+        <form>
+            <label for="transfer-amount">Amount:</label>
+            <input type="number" id="transfer-amount" name="transfer-amount" required>
+
+            <label for="transfer-to">Transfer To:</label>
+            <input type="text" id="transfer-to" name="transfer-to" required>
+
+            <label for="transfer-date">Date:</label>
+            <input type="date" id="transfer-date" name="transfer-date">
+
+            <button type="submit">Submit Transfer</button>
+        </form>
+    </section>
+
+    <!-- Bill Payment Section -->
+    <section class="bill-payment">
+        <h2>Bill Payments</h2>
+        <form>
+            <label for="biller-name">Biller Name:</label>
+            <input type="text" id="biller-name" name="biller-name" required>
+
+            <label for="bill-amount">Amount:</label>
+            <input type="number" id="bill-amount" name="bill-amount" required>
+
+            <label for="payment-date">Payment Date:</label>
+            <input type="date" id="payment-date" name="payment-date">
+
+            <button type="submit">Submit Payment</button>
+        </form>
+    </section>
+
+    <!-- Investment and Loan Information -->
+    <section class="investment-loan">
+        <h2>Investments & Loans</h2>
+        <div class="investment-summary">
+            <p><strong>Investment Portfolio:</strong> $20,000.00</p>
+            <p><strong>YTD Growth:</strong> 8%</p>
+        </div>
+        <div class="loan-summary">
+            <p><strong>Active Loan:</strong> Home Loan</p>
+            <p><strong>Outstanding Balance:</strong> $150,000.00</p>
+            <p><strong>Next Payment Due:</strong> 2024-11-05</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 MyBank. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
